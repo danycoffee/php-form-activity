@@ -6,7 +6,7 @@
         // get submitted values
         $name = $_POST['user_name'] ?? "";
         $email = $_POST['user_email'] ?? "";
-        $sev_level = $_POST['service_level'] ?? ""; //BUG: name mismatch later
+        $level = $_POST['service_level'] ?? ""; //BUG: name mismatch later
 
         // --- PART 2: BUILD THE RESPONSE ---
         $message = "<h1>Thank You, $name!</h1>" .
