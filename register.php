@@ -1,3 +1,5 @@
+<?php include 'header.php'; ?>
+
 <?php
     // --- PART 1: PROCESS THE DATA ---
     $message = "";
@@ -20,22 +22,9 @@
             "<a href='index.html'>Back to homepage</a>";
     }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Registration Complete</title>
 
-    <style>
-        body { font-family: sans-serif; margin: 0; }
-        .box { max-width: 360px; margin: 2rem auto; padding: 1rem; text-align: center; }
-    </style>
-</head>
-
-<body>
     <div class="box">
         <?php echo $message; ?>
     </div>
-</body>
 
-</html>
+<?php include 'footer.php'; ?>
