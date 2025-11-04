@@ -1,0 +1,41 @@
+<?php
+    // --- PART 1: PROCESS THE DATA ---
+    $message = "";
+
+    if (isset($_POST['submit_button'])) {
+        // get submitted values
+        $name = $_POST['user_name'] ?? "";
+        $email = $_POST['user_email'] ?? "";
+        $sev_level = $_POST['service_level'] ?? ""; //BUG: name mismatch later
+
+        // --- PART 2: BUILD THE RESPONSE ---
+        $message = "<h1>Thank You, $name!</h1>" .
+                    "<p>Your registration for the <b>$level</b> plan is complete.</p>" .
+                    "<p>We will email: $email</p>" .
+                    "<hr>".
+                    "<a href='index.html'>Back to homepage</a>";
+    } else {
+        $message = "<h1>Error</h1>" .
+            "<p>You must fill out the form to register.</p>" .
+            "<a href='index.html'>Back to homepage</a>";
+    }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Complete</title>
+
+    <style>
+        body { font-family: sans-serif; margin: 0; }
+        .box { max-width: 360px; margin: 2rem auto; padding: 1rem; text-align: center; }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <?php echo $message; ?>
+    </div>
+</body>
+
+</html>
