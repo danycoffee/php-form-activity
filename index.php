@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
 
-            <div class="formdiv">
+    <div class="formdiv">
         <form action="register.php" method="POST">
             <label for="name">Name</label>
             <input id="name" type="text" name="user_name">
@@ -17,6 +17,6 @@
 
             <button type="submit" name="submit_button">Sign Up</button>
         </form>
-            </div>
+    </div>
 
 <?php include 'footer.php'; ?>
